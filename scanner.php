@@ -24,7 +24,7 @@ function buka_dir($path){
 		}else{
 			$ngecek = ngebaca("$path/$key");
 			  if($ngecek){
-			  	if(preg_match('/Jumping|SAFE|Fake|cPanel|Jumping|shell|newfile|newfolder|pass|password|text|indoxploit|upload|eval|php|hacked|linux|windows|by|here/i', $key)){
+			  	if(preg_match('/Jumping|SAFE|Fake|cPanel|Jumping|shell|newfile|newfolder|pass|password|text|indoxploit|upload|eval|php|hacked|linux|windows|by|here/i', $ngecek)){
 			  		echo "[+] Di temukan shell -> $path/$key\n"; sleep(2);
 			  		echo "[+] Please waitt..\n";
 						$file = fopen("shell-found.txt", "a");
