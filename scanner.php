@@ -8,7 +8,7 @@
  */
 error_reporting(0);
 function ngebaca($iqro){
-	$r = fopen("$iqro", "r") or die("Fail to Read file !");
+	$r = fopen("$iqro", "r");
 	     fread($r, filesize("$iqro"));
 	     fclose($r);
 	 return $r;
@@ -23,7 +23,8 @@ function buka_dir($path){
 		}else{
 			$ngecek = ngebaca("$path/$key");
 			  if($ngecek){
-			  	if(preg_match('/Jumping|SAFE|Fake|cPanel|Jumping|shell|newfile|newfolder|pass|password|text|indoxploit|upload|eval|php|hacked|linux|windows|by|here/i', $ngecek)){
+                  $word = "Jumping|SAFE|Fake|cPanel|Jumping|shell|newfile|newfolder|pass|password|text|indoxploit|upload|eval|php|hacked|linux|windows|by|here|base_64|hacker|wso|shell_exec|base64_decode|chmod|eval";
+			  	if(strpos($word, $ngecek) !== false){
 			  		echo "[+] Di temukan shell -> $path/$key\n";
 			  		echo "[+] Please waitt..\n";
 						$file = fopen("shell-found.txt", "a");
