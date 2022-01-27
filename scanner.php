@@ -23,7 +23,7 @@ function buka_dir($path){
 		}else{
 			$ngecek = ngebaca("$path/$key");
 			  if($ngecek){
-                  $word = "Jumping|SAFE|Fake|cPanel|Jumping|shell|newfile|newfolder|pass|password|text|indoxploit|upload|eval|php|hacked|linux|windows|by|here|base_64|hacker|wso|shell_exec|base64_decode|chmod|eval";
+                 		 $word = "Jumping|SAFE|Fake|cPanel|Jumping|shell|newfile|newfolder|pass|password|text|indoxploit|upload|eval|php|hacked|linux|windows|by|here|base_64|hacker|wso|shell_exec|base64_decode|chmod|eval|php_uname";
 			  	if(strpos($word, $ngecek) !== false){
 			  		echo "[+] Di temukan shell -> $path/$key\n";
 			  		echo "[+] Please waitt..\n";
